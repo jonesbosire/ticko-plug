@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" fill="none">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#F0C427"/>
+    </linearGradient>
+  </defs>
+  <!-- Plug icon -->
+  <g transform="translate(4, 8)">
+    <rect x="14" y="0" width="4" height="8" rx="1" fill="#7C3AED"/>
+    <rect x="22" y="0" width="4" height="8" rx="1" fill="#7C3AED"/>
+    <path d="M10 8 h20 v8 a10 10 0 0 1 -20 0 Z" fill="#7C3AED"/>
+    <rect x="18" y="24" width="4" height="12" rx="2" fill="url(#logoGrad)"/>
+    <circle cx="20" cy="38" r="3" fill="#F0C427"/>
+  </g>
+  <!-- TICKO -->
+  <text x="52" y="38" font-family="DM Sans, sans-serif" font-weight="800" font-size="26" fill="#F8F8FF" letter-spacing="-0.5">TICKO</text>
+  <!-- ·PLUG -->
+  <text x="148" y="38" font-family="DM Sans, sans-serif" font-weight="800" font-size="26" fill="url(#logoGrad)" letter-spacing="-0.5">·PLUG</text>
+</svg>

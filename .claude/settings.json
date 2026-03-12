@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(composer create-project:*)",
+      "Read(//c/Users/USER PC/Desktop/**)",
+      "Bash(composer require:*)",
+      "Bash(composer dump-autoload:*)",
+      "Bash(printf \"organizer\\\\nno\\\\n\")",
+      "Bash(npm install:*)",
+      "Bash(mysql -u root -e \"CREATE DATABASE IF NOT EXISTS ticko_plug CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;\")",
+      "Read(//c/xampp/mysql/bin/**)",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root -e \"CREATE DATABASE IF NOT EXISTS ticko_plug CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; SHOW DATABASES;\")",
+      "Bash(mv \"2026_03_12_172020_create_order_items_table.php\" \"2026_03_12_172021_create_order_items_table.php\")",
+      "Bash(mv \"2026_03_12_172021_create_tickets_table.php\" \"2026_03_12_172022_create_tickets_table.php\")",
+      "Bash(mv \"2026_03_12_172022_create_payments_table.php\" \"2026_03_12_172023_create_payments_table.php\")",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root ticko_plug -e \"DROP TABLE IF EXISTS order_items;\")",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root ticko_plug -e \"SHOW TABLES;\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\USER PC\\Desktop\\ticko-plug-temp"
+    ]
+  }
+}
