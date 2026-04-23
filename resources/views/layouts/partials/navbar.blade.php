@@ -1,4 +1,4 @@
-<nav class="sticky top-0 z-40 border-b" style="background:rgba(8,8,17,0.85); backdrop-filter:blur(16px); border-color:rgba(42,42,64,0.8);">
+<nav class="sticky top-0 z-40 border-b" style="background:rgba(92,0,48,0.92); backdrop-filter:blur(16px); border-color:rgba(242,239,231,0.1);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
 

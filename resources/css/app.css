@@ -15,27 +15,27 @@
     --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
     --font-display: 'Flexing', 'DM Sans', ui-sans-serif, system-ui, sans-serif;
 
-    /* Brand Colors */
-    --color-brand-bg:           #080811;
-    --color-brand-surface:      #12121E;
-    --color-brand-elevated:     #1C1C2E;
-    --color-brand-border:       #2A2A40;
+    /* Brand Colors — Murrey */
+    --color-brand-bg:           #5C0030;
+    --color-brand-surface:      #8B004A;
+    --color-brand-elevated:     #A3005A;
+    --color-brand-border:       rgba(242,239,231,0.18);
 
-    --color-brand-primary:      #7C3AED;
-    --color-brand-primary-glow: #9D5EF0;
-    --color-brand-primary-dark: #5B21B6;
+    --color-brand-primary:      #F2EFE7;
+    --color-brand-primary-glow: rgba(242,239,231,0.85);
+    --color-brand-primary-dark: #D8D4C8;
 
     --color-brand-accent:       #F0C427;
     --color-brand-accent-alt:   #F97316;
 
-    --color-brand-success:      #22C55E;
-    --color-brand-danger:       #EF4444;
-    --color-brand-warning:      #F59E0B;
-    --color-brand-info:         #38BDF8;
+    --color-brand-success:      #4ADE80;
+    --color-brand-danger:       #FF6B6B;
+    --color-brand-warning:      #FBBF24;
+    --color-brand-info:         #67E8F9;
 
-    --color-brand-text:         #F8F8FF;
-    --color-brand-muted:        #94A3B8;
-    --color-brand-subtle:       #475569;
+    --color-brand-text:         #F2EFE7;
+    --color-brand-muted:        rgba(242,239,231,0.6);
+    --color-brand-subtle:       rgba(242,239,231,0.35);
 }
 
 /* ============================================================
@@ -78,8 +78,8 @@
 
     /* Buttons */
     .btn-primary {
-        background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
-        color: white;
+        background: linear-gradient(135deg, #F2EFE7 0%, #D8D4C8 100%);
+        color: #8B004A;
         font-weight: 600;
         padding: 0.75rem 1.75rem;
         border-radius: 12px;
@@ -91,8 +91,8 @@
         cursor: pointer;
     }
     .btn-primary:hover {
-        background: linear-gradient(135deg, #9D5EF0 0%, #7C3AED 100%);
-        box-shadow: 0 0 24px rgba(124, 58, 237, 0.5);
+        background: linear-gradient(135deg, #ffffff 0%, #F2EFE7 100%);
+        box-shadow: 0 0 24px rgba(242, 239, 231, 0.4);
         transform: translateY(-1px);
     }
     .btn-primary:active { transform: translateY(0); }
@@ -128,7 +128,7 @@
     .btn-ghost:hover {
         border-color: var(--color-brand-primary);
         color: var(--color-brand-primary);
-        background: rgba(124, 58, 237, 0.08);
+        background: rgba(242, 239, 231, 0.08);
     }
 
     /* Cards */
@@ -140,7 +140,7 @@
         transition: border-color 0.2s, box-shadow 0.2s;
     }
     .card:hover {
-        border-color: rgba(124, 58, 237, 0.4);
+        border-color: rgba(242, 239, 231, 0.35);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
@@ -164,7 +164,7 @@
     .event-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-        border-color: rgba(124, 58, 237, 0.5);
+        border-color: rgba(242, 239, 231, 0.3);
     }
     .event-card-banner {
         position: relative;
@@ -223,7 +223,7 @@
     .badge-warning { background: rgba(245, 158, 11, 0.15); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.3); }
     .badge-danger  { background: rgba(239, 68, 68, 0.15);  color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.3); }
     .badge-info    { background: rgba(56, 189, 248, 0.15); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.3); }
-    .badge-purple  { background: rgba(124, 58, 237, 0.15); color: #9D5EF0; border: 1px solid rgba(124, 58, 237, 0.3); }
+    .badge-purple  { background: rgba(242, 239, 231, 0.12); color: #F2EFE7; border: 1px solid rgba(242, 239, 231, 0.3); }
 
     /* Form Inputs */
     .form-input {
@@ -261,7 +261,7 @@
 
     /* Gradient text */
     .gradient-text {
-        background: linear-gradient(135deg, #7C3AED 0%, #F0C427 100%);
+        background: linear-gradient(135deg, #F2EFE7 0%, #F0C427 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -279,7 +279,7 @@
         inset: 0;
         border-radius: 16px;
         padding: 1.5px;
-        background: linear-gradient(135deg, #7C3AED, #F0C427);
+        background: linear-gradient(135deg, #F2EFE7, #F0C427);
         -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
@@ -289,8 +289,8 @@
     /* Hero gradient background */
     .hero-bg {
         background:
-            radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 58, 237, 0.3) 0%, transparent 70%),
-            radial-gradient(ellipse 40% 40% at 80% 80%, rgba(240, 196, 39, 0.08) 0%, transparent 60%),
+            radial-gradient(ellipse 80% 50% at 50% -20%, rgba(242, 239, 231, 0.12) 0%, transparent 70%),
+            radial-gradient(ellipse 40% 40% at 80% 80%, rgba(240, 196, 39, 0.1) 0%, transparent 60%),
             var(--color-brand-bg);
     }
 

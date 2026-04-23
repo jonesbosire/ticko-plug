@@ -14,7 +14,7 @@
             <img src="{{ $banner }}" alt="{{ $event->title }}" loading="lazy">
         @else
             <div class="w-full h-full flex items-center justify-center"
-                 style="background:linear-gradient(135deg, {{ $event->category->color ?? '#7C3AED' }}33, {{ $event->category->color ?? '#1C1C2E' }}66)">
+                 style="background:linear-gradient(135deg, {{ $event->category->color ?? '#8B004A' }}33, {{ $event->category->color ?? '#5C0030' }}66)">
                 <svg class="w-12 h-12 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/>
                 </svg>
@@ -25,7 +25,7 @@
 
         {{-- Category badge --}}
         <div class="absolute top-3 left-3">
-            <span class="ticket-badge" style="background:{{ $event->category->color ?? '#7C3AED' }}22; border-color:{{ $event->category->color ?? '#7C3AED' }}55; color:{{ $event->category->color ?? '#F0C427' }}">
+            <span class="ticket-badge" style="background:{{ $event->category->color ?? '#F2EFE7' }}22; border-color:{{ $event->category->color ?? '#F2EFE7' }}55; color:{{ $event->category->color ?? '#F0C427' }}">
                 {{ $event->category->name ?? 'Event' }}
             </span>
         </div>
@@ -43,7 +43,7 @@
         {{-- Sold out overlay --}}
         @if ($isSoldOut)
             <div class="absolute inset-0 flex items-center justify-center"
-                 style="background:rgba(8,8,17,0.7)">
+                 style="background:rgba(92,0,48,0.75)">
                 <span class="badge badge-danger text-sm px-4 py-2">Sold Out</span>
             </div>
         @endif
@@ -61,7 +61,7 @@
         </div>
 
         {{-- Title --}}
-        <h3 class="font-bold text-base leading-snug mb-2 group-hover:text-purple-300 transition-colors line-clamp-2">
+        <h3 class="font-bold text-base leading-snug mb-2 transition-colors line-clamp-2" style="color:var(--color-brand-text)">
             {{ $event->title }}
         </h3>
 
@@ -101,7 +101,7 @@
             </div>
 
             <div class="w-8 h-8 rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-                 style="background:var(--color-brand-primary); color:white">
+                 style="background:var(--color-brand-primary); color:#8B004A">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                 </svg>

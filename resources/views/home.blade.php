@@ -12,7 +12,7 @@
     {{-- Decorative blobs --}}
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div class="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-20 blur-3xl"
-             style="background: radial-gradient(circle, #7C3AED, transparent)"></div>
+             style="background: radial-gradient(circle, rgba(242,239,231,0.35), transparent)"></div>
         <div class="absolute bottom-0 right-1/4 w-72 h-72 rounded-full opacity-10 blur-3xl"
              style="background: radial-gradient(circle, #F0C427, transparent)"></div>
     </div>
@@ -20,7 +20,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-4xl mx-auto">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
-                 style="background:rgba(124,58,237,0.15); border:1px solid rgba(124,58,237,0.4); color:#9D5EF0">
+                 style="background:rgba(242,239,231,0.1); border:1px solid rgba(242,239,231,0.3); color:#F2EFE7">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
@@ -87,11 +87,11 @@
                 <a href="{{ route('events.category', $cat) }}"
                    class="group flex flex-col items-center gap-2 p-4 rounded-2xl text-center transition-all duration-200"
                    style="background:var(--color-brand-surface); border:1px solid var(--color-brand-border)"
-                   onmouseover="this.style.borderColor='{{ $cat->color ?? '#7C3AED' }}44'; this.style.background='{{ $cat->color ?? '#7C3AED' }}11'"
+                   onmouseover="this.style.borderColor='{{ $cat->color ?? '#F2EFE7' }}44'; this.style.background='{{ $cat->color ?? '#F2EFE7' }}11'"
                    onmouseout="this.style.borderColor='var(--color-brand-border)'; this.style.background='var(--color-brand-surface)'">
 
                     <div class="w-10 h-10 rounded-xl flex items-center justify-center"
-                         style="background:{{ $cat->color ?? '#7C3AED' }}22; color:{{ $cat->color ?? '#7C3AED' }}">
+                         style="background:{{ $cat->color ?? '#F2EFE7' }}22; color:{{ $cat->color ?? '#F2EFE7' }}">
                         <x-dynamic-component :component="$cat->icon ?? 'heroicon-o-star'" class="w-5 h-5"/>
                     </div>
                     <span class="text-xs font-medium leading-tight" style="color:var(--color-brand-muted)">{{ $cat->name }}</span>
@@ -216,7 +216,7 @@
             <div class="relative text-center p-8 rounded-2xl"
                  style="background:var(--color-brand-surface); border:1px solid var(--color-brand-border)">
                 <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
-                     style="background:rgba(124,58,237,0.12); color:#9D5EF0">
+                     style="background:rgba(242,239,231,0.1); color:#F2EFE7">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         {!! $step['svg'] !!}
                     </svg>
@@ -237,7 +237,7 @@
 <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative overflow-hidden rounded-3xl p-10 md:p-16 text-center"
-             style="background:linear-gradient(135deg, rgba(124,58,237,0.2) 0%, rgba(240,196,39,0.1) 100%); border:1px solid rgba(124,58,237,0.3)">
+             style="background:linear-gradient(135deg, rgba(242,239,231,0.08) 0%, rgba(240,196,39,0.08) 100%); border:1px solid rgba(242,239,231,0.2)">
 
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10 blur-3xl"
@@ -246,7 +246,7 @@
 
             <div class="relative z-10">
                 <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6"
-                     style="background:rgba(124,58,237,0.2); color:#9D5EF0; border:1px solid rgba(124,58,237,0.4)">
+                     style="background:rgba(242,239,231,0.12); color:#F2EFE7; border:1px solid rgba(242,239,231,0.3)">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
