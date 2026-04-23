@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/efgcoqbh/public_html/
+    - /bin/rsync -av --exclude='.git' --exclude='.env' --exclude='vendor' --exclude='node_modules' --exclude='storage/app/public' . $DEPLOYPATH
