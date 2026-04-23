@@ -22,7 +22,7 @@ class User extends Authenticatable implements FilamentUser
     use HasFactory, Notifiable, HasRoles, SoftDeletes, LogsActivity;
 
     protected $fillable = [
-        'name', 'email', 'phone', 'password', 'avatar',
+        'name', 'email', 'google_id', 'phone', 'password', 'avatar',
         'status', 'last_login_at', 'last_login_ip',
     ];
 

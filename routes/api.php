@@ -34,3 +34,8 @@ Route::prefix('tickets')->middleware('auth:sanctum')->group(function () {
 Route::get('/payment/status/{order}', [PaymentStatusController::class, 'status'])
     ->middleware('throttle:30,1')
     ->name('api.payment.status');
+
+// Order status polling (used by checkout/processing.blade.php)
+Route::get('/orders/{orderNumber}/status', [PaymentStatusController::class, 'status'])
+    ->middleware('throttle:30,1')
+    ->name('api.orders.status');

@@ -10,6 +10,7 @@ use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
+use App\Filament\Organizer\Widgets\OrganizerStatsWidget;
 use Filament\Widgets;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -26,7 +27,7 @@ class OrganizerPanelProvider extends PanelProvider
             ->id('organizer')
             ->path('manage')
             ->login()
-            ->registration()
+            ->registration(\App\Filament\Organizer\Pages\Register::class)
             ->brandName('Ticko-Plug — Organizer')
             ->brandLogo(asset('images/logo.svg'))
             ->favicon(asset('images/favicon.ico'))
@@ -47,6 +48,7 @@ class OrganizerPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Organizer/Widgets'), for: 'App\\Filament\\Organizer\\Widgets')
             ->widgets([
+                OrganizerStatsWidget::class,
                 Widgets\AccountWidget::class,
             ])
             ->middleware([

@@ -11,7 +11,6 @@
             <div class="hidden md:flex items-center gap-6">
                 <a href="{{ route('events.index') }}" class="nav-link text-sm">Browse Events</a>
                 <a href="{{ route('search') }}" class="nav-link text-sm">Search</a>
-                <a href="#" class="nav-link text-sm">For Organisers</a>
             </div>
 
             {{-- Right --}}
@@ -19,29 +18,34 @@
                 @auth
                     <a href="{{ route('orders.index') }}" class="nav-link text-sm hidden md:block">My Tickets</a>
 
-                    @if(auth()->user()->isOrganizer())
-                        <a href="/manage" class="btn-ghost text-sm py-2 px-4">Dashboard</a>
-                    @endif
-
                     <div x-data="{ open: false }" class="relative">
                         <button @click="open = !open" class="flex items-center gap-2 text-sm" style="color:var(--color-brand-muted)">
-                            <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm" style="background:var(--color-brand-primary)">
-                                {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}
-                            </div>
-                        </button>
-                        <div x-show="open" @click.outside="open = false" x-cloak
-                             class="absolute right-0 mt-2 w-48 card py-1 shadow-xl z-50">
-                            <div class="px-4 py-2 border-b" style="border-color:var(--color-brand-border)">
-                                <p class="text-sm font-medium">{{ auth()->user()->name }}</p>
-                                <p class="text-xs" style="color:var(--color-brand-muted)">{{ auth()->user()->email }}</p>
-                            </div>
-                            <a href="{{ route('orders.index') }}" class="block px-4 py-2 text-sm nav-link hover:bg-white/5">My Tickets</a>
-                            @if(auth()->user()->isAdmin())
-                                <a href="/admin" class="block px-4 py-2 text-sm nav-link hover:bg-white/5">Admin Panel</a>
+                            @if(auth()->user()->avatar)
+                                <img src="{{ auth()->user()->avatar }}" alt=""
+                                     class="w-8 h-8 rounded-full object-cover">
+                            @else
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm"
+                                     style="background:var(--color-brand-primary)">
+                                    {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}
+                                </div>
                             @endif
+                        </button>
+
+                        <div x-show="open" @click.outside="open = false" x-cloak
+                             class="absolute right-0 mt-2 w-52 card py-1 shadow-xl z-50">
+                            <div class="px-4 py-2 border-b" style="border-color:var(--color-brand-border)">
+                                <p class="text-sm font-medium truncate">{{ auth()->user()->name }}</p>
+                                <p class="text-xs truncate" style="color:var(--color-brand-muted)">{{ auth()->user()->email }}</p>
+                            </div>
+                            <a href="{{ route('orders.index') }}"
+                               class="block px-4 py-2 text-sm nav-link hover:bg-white/5">
+                                My Tickets
+                            </a>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-                                <button type="submit" class="block w-full text-left px-4 py-2 text-sm hover:bg-white/5" style="color:var(--color-brand-danger)">
+                                <button type="submit"
+                                        class="block w-full text-left px-4 py-2 text-sm hover:bg-white/5"
+                                        style="color:var(--color-brand-danger)">
                                     Sign Out
                                 </button>
                             </form>
@@ -52,8 +56,9 @@
                     <a href="{{ route('register') }}" class="btn-primary text-sm py-2 px-4">Get Started</a>
                 @endauth
 
-                {{-- Mobile menu --}}
-                <button class="md:hidden p-2 rounded-lg" style="color:var(--color-brand-muted)" x-data x-on:click="$dispatch('toggle-mobile-menu')">
+                {{-- Mobile menu toggle --}}
+                <button class="md:hidden p-2 rounded-lg" style="color:var(--color-brand-muted)"
+                        x-data x-on:click="$dispatch('toggle-mobile-menu')">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>

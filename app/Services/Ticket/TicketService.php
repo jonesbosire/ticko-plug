@@ -5,6 +5,8 @@ namespace App\Services\Ticket;
 use App\Enums\TicketStatus;
 use App\Models\Order;
 use App\Models\Ticket;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 
 class TicketService
@@ -57,5 +59,20 @@ class TicketService
         } while (Ticket::where('ticket_number', $number)->exists());
 
         return $number;
+    }
+
+    public function downloadPdf(Ticket $ticket): Response
+    {
+        $ticket->load(['order.event.venue', 'ticketType']);
+
+        $pdf = Pdf::loadView('tickets.pdf', compact('ticket'))
+            ->setPaper([0, 0, 595.28, 283.46]); // A5 landscape
+
+        $ticket->updateQuietly(['pdf_generated_at' => now()]);
+
+        return response($pdf->output(), 200, [
+            'Content-Type'        => 'application/pdf',
+            'Content-Disposition' => 'attachment; filename="ticket-' . $ticket->ticket_number . '.pdf"',
+        ]);
     }
 }
