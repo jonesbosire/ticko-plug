@@ -14,10 +14,27 @@
       "Bash(mv \"2026_03_12_172021_create_tickets_table.php\" \"2026_03_12_172022_create_tickets_table.php\")",
       "Bash(mv \"2026_03_12_172022_create_payments_table.php\" \"2026_03_12_172023_create_payments_table.php\")",
       "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root ticko_plug -e \"DROP TABLE IF EXISTS order_items;\")",
-      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root ticko_plug -e \"SHOW TABLES;\")"
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root ticko_plug -e \"SHOW TABLES;\")",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/USER PC/Desktop/event-ticketing/**)",
+      "Bash(done)",
+      "Bash(echo \":*)",
+      "Bash(\"c:/Users/USER PC/Desktop/event-ticketing/routes/api.php\")",
+      "Bash(php artisan tinker --execute=\":*)",
+      "Bash(php -r \":*)",
+      "Bash(php c:/tmp/test_view.php)",
+      "Bash(php -l routes/web.php)",
+      "Bash(php -l app/Http/Controllers/Auth/SocialAuthController.php)",
+      "Bash(\"c:/Users/USER PC/Desktop/event-ticketing/resources/views/auth/login.blade.php\":*)",
+      "Bash(\"c:/Users/USER PC/Desktop/event-ticketing/resources/views/auth/register.blade.php\":*)",
+      "Bash(\"c:/Users/USER PC/Desktop/event-ticketing/resources/views/layouts/partials/navbar.blade.php\":*)",
+      "Bash(\"c:/Users/USER PC/Desktop/event-ticketing/resources/views/layouts/partials/footer.blade.php\":*)",
+      "Bash(php -l app/Http/Controllers/Auth/AuthController.php)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\USER PC\\Desktop\\ticko-plug-temp"
+      "c:\\Users\\USER PC\\Desktop\\ticko-plug-temp",
+      "c:\\Users\\USER PC\\Desktop\\event-ticketing\\bootstrap\\cache"
     ]
   }
 }
